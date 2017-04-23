@@ -1,0 +1,41 @@
+﻿@model string
+
+@{
+    ViewBag.Title = "MultipleForms";
+}
+
+<pre>
+           Container().Elements(
+                    Form().Elements(
+                        Container().Elements(
+                            Label("Input 1"),
+                            Input().Class("form-control")),
+                        Container().Elements(
+                            Label("Input 2"),
+                            Input().Class("form-control")),
+                        Container().Elements(
+                            Label("Input 3"),
+                            Input().Class("form-control")),
+                        Container().Elements(
+                            Label("Input 4"),
+                            Input().Class("form-control")),
+                        Container().Elements(
+                            Container().Elements(
+                                Label("Input 5"),
+                                Input().Class("form-control"),
+                                Label("Input 6"),
+                                Input().Class("form-control")))),
+                    Form().Elements(
+                        Container().Elements(
+                            Label("Input 1"),
+                            Input().Class("form-control")),
+                        Label("Input 2"),
+                        Input().Class("form-control"),
+                        Label("Input 3"),
+                        Input().Class("form-control"))
+                );
+</pre>
+<h4>Result: </h4>
+<div>
+    @Html.Raw(Model)
+</div>

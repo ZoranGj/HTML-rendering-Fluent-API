@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C4DAAB25-393C-4913-A43F-5C0298BA7FB7}</ProjectGuid>
+    <ProjectGuid>{598E7095-C425-4E08-B5BF-53D104395F1B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>API</RootNamespace>
-    <AssemblyName>API</AssemblyName>
+    <RootNamespace>Domain</RootNamespace>
+    <AssemblyName>Domain</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,22 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\Label.cs" />
-    <Compile Include="Controls\Table.cs" />
-    <Compile Include="Engine.cs" />
-    <Compile Include="Controls\Body.cs" />
-    <Compile Include="Controls\Container.cs" />
-    <Compile Include="Controls\_Control.cs" />
-    <Compile Include="Controls\Form.cs" />
-    <Compile Include="Controls\Input.cs" />
-    <Compile Include="FluentAPI\HTMLControls.cs" />
+    <Compile Include="Entity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain.csproj">
-      <Project>{598E7095-C425-4E08-B5BF-53D104395F1B}</Project>
-      <Name>Domain</Name>
-    </ProjectReference>
+    <Compile Include="Property.cs" />
+    <Compile Include="PropertyType.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

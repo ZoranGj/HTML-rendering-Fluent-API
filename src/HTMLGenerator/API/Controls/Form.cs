@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace API.Controls
 {
-    public class Body : Control
+    public class Form : Control
     {
         public override string Html()
         {
-            var stringBuilder = "<body>";
+            var stringBuilder = new StringBuilder("<form>");
             foreach (var child in Children)
             {
-                stringBuilder += child.Html();
+                stringBuilder.Append(child.Html());
             }
-            stringBuilder += "</body>";
+            stringBuilder.Append("</form>");
             return stringBuilder.ToString();
         }
     }

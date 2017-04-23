@@ -10,14 +10,13 @@ namespace API.Controls
     {
         public override string Html()
         {
-            var stringBuilder = Environment.NewLine;
-            stringBuilder += "<div>";
+            var stringBuilder = new StringBuilder(Environment.NewLine);
+            stringBuilder.Append(string.Format("<div{0}>", Attribures()));
             foreach (var child in Children)
             {
-                stringBuilder += child.Html();
+                stringBuilder.Append(child.Html());
             }
-            stringBuilder += "</div>";
-            stringBuilder += Environment.NewLine;
+            stringBuilder.Append("</div>").Append(Environment.NewLine);
             return stringBuilder.ToString();
         }
     }

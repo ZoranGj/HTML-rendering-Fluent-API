@@ -11,17 +11,68 @@ namespace API
 {
     public class Engine
     {
-        public string Generate()
+        public string ExampleForm()
         {
-            var html = Body().Elements(
-                Container().Elements(
-                        Container().Elements(
-                            Input(),
-                            Input()),
-                        Input()),
-                Container().Elements(
-                        Input()));
+            var html = 
+            Form().Elements(Container().Class("well").Style("padding: 20px;").Elements(
+                Label("Form label"),
+                Container().Class("col-md-6").Elements(
+                        Container().Class("form-group").Elements(
+                            Label("Input 1"),
+                            Input().Class("form-control"),
+                            Label("Input 2"),
+                            Input().Class("form-control")),
+                        Label("Input 3"),
+                        Input().Class("form-control")),
+                Container().Class("col-md-6 form-group").Elements(
+                        Label("Input 4"),
+                        Input().Class("form-control"))));
             return html.Html();
+        }
+
+        public string ExampleMultipleForms()
+        {
+            var html = 
+                Container().Elements(
+                    Form().Elements(
+                        Container().Elements(
+                            Label("Input 1"),
+                            Input().Class("form-control")),
+                        Container().Elements(
+                            Label("Input 2"),
+                            Input().Class("form-control")),
+                        Container().Elements(
+                            Label("Input 3"),
+                            Input().Class("form-control")),
+                        Container().Elements(
+                            Label("Input 4"),
+                            Input().Class("form-control")),
+                        Container().Elements(
+                            Container().Elements(
+                                Label("Input 5"),
+                                Input().Class("form-control"),
+                                Label("Input 6"),
+                                Input().Class("form-control")))),
+                    Form().Elements(
+                        Container().Elements(
+                            Label("Input 1"),
+                            Input().Class("form-control")),
+                        Label("Input 2"),
+                        Input().Class("form-control"),
+                        Label("Input 3"),
+                        Input().Class("form-control"))
+                );
+            return html.Html();
+        }
+
+        public static Control Form()
+        {
+            return new Form();
+        }
+
+        public static Control Label(string text)
+        {
+            return new Label(text);
         }
 
         public static Control Body()
