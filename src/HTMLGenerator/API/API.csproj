@@ -42,12 +42,15 @@
   <ItemGroup>
     <Compile Include="Controls\Label.cs" />
     <Compile Include="Controls\Table.cs" />
-    <Compile Include="Engine.cs" />
+    <Compile Include="Controls\TableRow.cs" />
+    <Compile Include="Engines\DataEngine.cs" />
+    <Compile Include="Engines\Engine.cs" />
     <Compile Include="Controls\Body.cs" />
     <Compile Include="Controls\Container.cs" />
     <Compile Include="Controls\_Control.cs" />
     <Compile Include="Controls\Form.cs" />
     <Compile Include="Controls\Input.cs" />
+    <Compile Include="Extensions\Collections.cs" />
     <Compile Include="FluentAPI\HTMLControls.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

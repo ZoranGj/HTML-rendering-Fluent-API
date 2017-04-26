@@ -1,20 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using API.FluentAPI;
+﻿using API.FluentAPI;
 using API.Controls;
 
-namespace API
+namespace API.Engine
 {
     public class Engine
     {
         public string ExampleForm()
         {
             var html = 
-            Form().Elements(Container().Class("well").Style("padding: 20px;").Elements(
+            Form().Elements(Container().Class("well").Style("padding", "20px;").Elements(
                 Label("Form label"),
                 Container().Class("col-md-6").Elements(
                         Container().Class("form-group").Elements(
@@ -65,29 +59,34 @@ namespace API
             return html.Html();
         }
 
-        public static Control Form()
+        protected static Control Form()
         {
             return new Form();
         }
 
-        public static Control Label(string text)
+        protected static Control Label(string text)
         {
             return new Label(text);
         }
 
-        public static Control Body()
+        protected static Control Body()
         {
             return new Body();
         }
 
-        public static Container Container()
+        protected static Control Container()
         {
             return new Container();
         }
 
-        public static Input Input()
+        protected static Control Input()
         {
             return new Input();
+        }
+
+        protected static Table Table()
+        {
+            return new Table();
         }
     }
 }

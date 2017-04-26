@@ -1,4 +1,5 @@
 ﻿using API.Controls;
+using API.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,9 +37,9 @@ namespace API.FluentAPI
             return control;
         }
 
-        public static Control Style(this Control control, string value)
+        public static Control Style(this Control control, string attr, string value)
         {
-            control.Attributes.Add("style", value);
+            control.Styles.AddStyle(attr, value);
             return control;
         }
     }

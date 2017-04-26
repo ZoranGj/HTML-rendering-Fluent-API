@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class Entity
+    public class PropertyDefinition
     {
         public int Id { get; set; }
-        public EntityDefinition Definition { get; set; }
-        public HashSet<Property> Properties { get; set; }
+        public string Name { get; set; }
+        public PropertyType Type { get; set; }
     }
 }

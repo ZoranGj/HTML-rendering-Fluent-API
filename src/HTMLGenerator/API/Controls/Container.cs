@@ -11,7 +11,7 @@ namespace API.Controls
         public override string Html()
         {
             var stringBuilder = new StringBuilder(Environment.NewLine);
-            stringBuilder.Append(string.Format("<div{0}>", Attribures()));
+            stringBuilder.Append(string.Format("<div{0} {1}>", GenerateAttributes(), GenerateStyles()));
             foreach (var child in Children)
             {
                 stringBuilder.Append(child.Html());

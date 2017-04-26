@@ -1,24 +1,20 @@
 ﻿using Domain;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace API.Controls
 {
     public class Input : Control
     {
-        private Property _property;
+        public PropertyDefinition Definition { get; set; }
 
         public string InputType
         {
             get
             {
-                if (_property == null)
+                if (Definition == null)
                     return "text";
 
-                switch (_property.Type)
+                switch (Definition.Type)
                 {
                     case PropertyType.Boolean:
                         return "checkbox";
@@ -32,16 +28,11 @@ namespace API.Controls
             }
         }
 
-        public Input(Property property)
-        {
-            _property = property;
-        }
-
         public Input() { }
 
         public override string Html()
         {
-            return string.Format("{0}<input type='{1}' {2} />{0}", Environment.NewLine, InputType, Attribures());
+            return string.Format("{0}<input type='{1}' {2} {3}/>{0}", Environment.NewLine, InputType, GenerateAttributes(), GenerateStyles());
         }
     }
 }
