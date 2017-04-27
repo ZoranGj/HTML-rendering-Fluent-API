@@ -21,17 +21,5 @@ namespace UI.Controllers
         {
             return View();
         }
-
-        public ActionResult Form()
-        {
-            var model = _engine.ExampleForm();
-            return View((object)model);
-        }
-
-        public ActionResult MultipleForms()
-        {
-            var model = _engine.ExampleMultipleForms();
-            return View((object)model);
-        }
     }
 }

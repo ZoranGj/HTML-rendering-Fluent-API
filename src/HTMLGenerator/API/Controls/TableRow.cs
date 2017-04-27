@@ -1,5 +1,4 @@
-﻿using Domain;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,11 +8,20 @@ namespace API.Controls
 {
     public class TableRow : Control
     {
-        public Entity Entity { get; set; }
+        public List<string> Values { get; set; }
 
         public override string Html()
         {
-            throw new NotImplementedException();
+            var stringBuilder = new StringBuilder(Environment.NewLine);
+            stringBuilder.Append("<tr>");
+            Values.ForEach(v => stringBuilder.Append(TableCellHtml(v)));
+            stringBuilder.Append("</tr>").Append(Environment.NewLine);
+            return stringBuilder.ToString();
+        }
+
+        private string TableCellHtml(string value)
+        {
+            return string.Format("<td>{0}</td>", value);
         }
     }
 }

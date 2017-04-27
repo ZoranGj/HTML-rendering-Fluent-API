@@ -6,8 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using API.FluentAPI;
 using API.Controls;
+using API.Engine;
 
-namespace API.Engine
+namespace Domain
 {
     public class DataEngine : Engine
     {
@@ -46,14 +47,32 @@ namespace API.Engine
         private Control Input(PropertyDefinition property)
         {
             var input = new Input();
-            input.Definition = property;
+            input.InputType = GetInputType(property);
             return input;
+        }
+
+        private string GetInputType(PropertyDefinition property)
+        {
+            if (property == null)
+                return "text";
+
+            switch (property.Type)
+            {
+                case PropertyType.Boolean:
+                    return "checkbox";
+                case PropertyType.Date:
+                    return "date";
+                case PropertyType.DateTime:
+                    return "datetime";
+                default:
+                    return "text";
+            }
         }
 
         private Control DataRow(Entity entity)
         {
             var tableRow = new TableRow();
-            tableRow.Entity = entity;
+            tableRow.Values = entity.Properties.Select(p => p.Value).ToList();
             return tableRow;
         }
     }

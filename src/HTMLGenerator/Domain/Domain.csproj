@@ -40,12 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity.cs" />
-    <Compile Include="EntityDefinition.cs" />
+    <Compile Include="DataEngine.cs" />
+    <Compile Include="Data\Entity.cs" />
+    <Compile Include="Data\EntityDefinition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Property.cs" />
-    <Compile Include="PropertyDefinition.cs" />
-    <Compile Include="PropertyType.cs" />
+    <Compile Include="Data\Property.cs" />
+    <Compile Include="Data\PropertyDefinition.cs" />
+    <Compile Include="Data\PropertyType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\API\API.csproj">
+      <Project>{c4daab25-393c-4913-a43f-5c0298ba7fb7}</Project>
+      <Name>API</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

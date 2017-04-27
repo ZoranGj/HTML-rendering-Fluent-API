@@ -66,7 +66,9 @@ namespace API.Engine
 
         protected static Control Label(string text)
         {
-            return new Label(text);
+            var label = new Label();
+            label.Text = text;
+            return label;
         }
 
         protected static Control Body()

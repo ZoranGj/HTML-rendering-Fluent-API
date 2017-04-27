@@ -1,34 +1,10 @@
-﻿using Domain;
-using System;
+﻿using System;
 
 namespace API.Controls
 {
     public class Input : Control
     {
-        public PropertyDefinition Definition { get; set; }
-
-        public string InputType
-        {
-            get
-            {
-                if (Definition == null)
-                    return "text";
-
-                switch (Definition.Type)
-                {
-                    case PropertyType.Boolean:
-                        return "checkbox";
-                    case PropertyType.Date:
-                        return "date";
-                    case PropertyType.DateTime:
-                        return "datetime";
-                    default:
-                        return "text";
-                }
-            }
-        }
-
-        public Input() { }
+        public string InputType { get; set; }
 
         public override string Html()
         {

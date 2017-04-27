@@ -43,8 +43,7 @@
     <Compile Include="Controls\Label.cs" />
     <Compile Include="Controls\Table.cs" />
     <Compile Include="Controls\TableRow.cs" />
-    <Compile Include="Engines\DataEngine.cs" />
-    <Compile Include="Engines\Engine.cs" />
+    <Compile Include="Engine.cs" />
     <Compile Include="Controls\Body.cs" />
     <Compile Include="Controls\Container.cs" />
     <Compile Include="Controls\_Control.cs" />
@@ -55,10 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Domain\Domain.csproj">
-      <Project>{598E7095-C425-4E08-B5BF-53D104395F1B}</Project>
-      <Name>Domain</Name>
-    </ProjectReference>
+    <Folder Include="Engines\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
