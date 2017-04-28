@@ -1,4 +1,5 @@
-﻿using System;
+﻿using API.FluentAPI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,10 +12,7 @@ namespace API.Controls
         public override string Html()
         {
             var stringBuilder = new StringBuilder("<form>");
-            foreach (var child in Children)
-            {
-                stringBuilder.Append(child.Html());
-            }
+            stringBuilder.ChildrenHTML(this);
             stringBuilder.Append("</form>");
             return stringBuilder.ToString();
         }

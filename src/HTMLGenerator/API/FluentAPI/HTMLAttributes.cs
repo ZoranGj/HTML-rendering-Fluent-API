@@ -2,7 +2,7 @@
 
 namespace API.Extensions
 {
-    public static class Collections
+    public static class HTMLAttributes
     {
         public static void AddStyle(this Dictionary<string, string> styles, string attr, string value)
         {

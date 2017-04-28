@@ -43,19 +43,19 @@
     <Compile Include="Controls\Label.cs" />
     <Compile Include="Controls\Table.cs" />
     <Compile Include="Controls\TableRow.cs" />
-    <Compile Include="Engine.cs" />
+    <Compile Include="Infrastructure\Engine.cs" />
     <Compile Include="Controls\Body.cs" />
     <Compile Include="Controls\Container.cs" />
     <Compile Include="Controls\_Control.cs" />
     <Compile Include="Controls\Form.cs" />
     <Compile Include="Controls\Input.cs" />
-    <Compile Include="Extensions\Collections.cs" />
+    <Compile Include="FluentAPI\HTMLAttributes.cs" />
     <Compile Include="FluentAPI\HTMLControls.cs" />
+    <Compile Include="FluentAPI\HTMLGeneration.cs" />
+    <Compile Include="Infrastructure\IHTMLGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Engines\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using API.Infrastructure;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace API.Controls
 {
-    public abstract class Control
+    public abstract class Control : IHTMLGenerator
     {
         public List<Control> Children { get; set; }
         public Dictionary<string, string> Attributes { get; set; }
