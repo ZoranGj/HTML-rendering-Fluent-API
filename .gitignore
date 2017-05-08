@@ -240,3 +240,8 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+Examples/HTMLGenerator/UI/ApplicationInsights.config
+Nuget library/HtmlGenerator/Package.nuspec
+Nuget library/HtmlGenerator/HtmlGenerator/HtmlGenerator.nuspec
+Examples/HTMLGenerator/UI/Web.Debug.config
+*.config

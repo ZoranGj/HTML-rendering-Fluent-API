@@ -42,5 +42,11 @@ namespace API.FluentAPI
             control.Styles.AddStyle(attr, value);
             return control;
         }
+
+        public static Control Data(this Control control, string dataSuffix, string value)
+        {
+            control.Attributes.Add(string.Format("data-{0}", dataSuffix), value);
+            return control;
+        }
     }
 }
