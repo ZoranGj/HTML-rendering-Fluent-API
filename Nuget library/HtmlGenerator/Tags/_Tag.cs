@@ -5,17 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HtmlGenerator.Controls
+namespace HtmlGenerator.Tags
 {
-    public abstract class Control : IHTMLGenerator
+    public abstract class Tag : IHTMLElement
     {
-        public List<Control> Children { get; set; }
+        public List<Tag> Children { get; set; }
         public Dictionary<string, string> Attributes { get; set; }
         public Dictionary<string, string> Styles { get; set; }
 
         public abstract string Html();
 
-        public Control()
+        public Tag()
         {
             Attributes = new Dictionary<string, string>();
             Styles = new Dictionary<string, string>();

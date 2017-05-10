@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HtmlGenerator.Infrastructure
 {
-    public interface IHTMLGenerator
+    public interface IHTMLElement
     {
         string GenerateAttributes();
 

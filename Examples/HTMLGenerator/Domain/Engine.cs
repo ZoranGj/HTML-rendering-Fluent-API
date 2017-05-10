@@ -1,13 +1,18 @@
-﻿using HtmlGenerator.FluentAPI;
-using HtmlGenerator.Controls;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using HtmlGenerator.FluentAPI;
+using static HtmlGenerator.Infrastructure.TagGenerator;
 
-namespace HtmlGenerator.Infrastructure
+namespace Domain
 {
     public class Engine
     {
         public string ExampleForm()
         {
-            var html = 
+            var html =
             Form().Elements(Container().Class("well").Style("padding", "20px;").Elements(
                 Label("Form label"),
                 Container().Class("col-md-6").Elements(
@@ -26,7 +31,7 @@ namespace HtmlGenerator.Infrastructure
 
         public string ExampleMultipleForms()
         {
-            var html = 
+            var html =
                 Container().Elements(
                     Form().Elements(
                         Container().Elements(
@@ -57,38 +62,6 @@ namespace HtmlGenerator.Infrastructure
                         Input().Class("form-control"))
                 );
             return html.Html();
-        }
-
-        protected static Control Form()
-        {
-            return new Form();
-        }
-
-        protected static Control Label(string text)
-        {
-            var label = new Label();
-            label.Text = text;
-            return label;
-        }
-
-        protected static Control Body()
-        {
-            return new Body();
-        }
-
-        protected static Control Container()
-        {
-            return new Container();
-        }
-
-        protected static Control Input()
-        {
-            return new Input();
-        }
-
-        protected static Table Table()
-        {
-            return new Table();
         }
     }
 }

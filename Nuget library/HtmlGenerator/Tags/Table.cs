@@ -5,16 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HtmlGenerator.Controls
+namespace HtmlGenerator.Tags
 {
-    public class Container : Control
+    public class Table : Tag
     {
         public override string Html()
         {
             var stringBuilder = new StringBuilder(Environment.NewLine);
-            stringBuilder.Append(string.Format("<div{0} {1}>", GenerateAttributes(), GenerateStyles()));
+            stringBuilder.Append(string.Format("<table{0} {1}>", GenerateAttributes(), GenerateStyles()));
             stringBuilder.ChildrenHTML(this);
-            stringBuilder.Append("</div>").Append(Environment.NewLine);
+            stringBuilder.Append("</table>").Append(Environment.NewLine);
             return stringBuilder.ToString();
         }
     }

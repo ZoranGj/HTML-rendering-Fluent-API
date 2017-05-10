@@ -1,33 +1,33 @@
-﻿using API.FluentAPI;
-using API.Controls;
+﻿using HtmlGenerator.FluentAPI;
+using HtmlGenerator.Tags;
 
-namespace API.Infrastructure
+namespace HtmlGenerator.Infrastructure
 {
-    public class Engine
+    public class TagGenerator
     {
-        public static Control Form()
+        public static Tag Form()
         {
             return new Form();
         }
 
-        public static Control Label(string text)
+        public static Tag Label(string text)
         {
             var label = new Label();
             label.Text = text;
             return label;
         }
 
-        public static Control Body()
+        public static Tag Body()
         {
             return new Body();
         }
 
-        public static Control Container()
+        public static Tag Container()
         {
             return new Container();
         }
 
-        public static Control Input()
+        public static Tag Input()
         {
             return new Input();
         }

@@ -1,4 +1,4 @@
-﻿using HtmlGenerator.Controls;
+﻿using HtmlGenerator.Tags;
 using HtmlGenerator.Extensions;
 using System;
 using System.Collections.Generic;
@@ -10,43 +10,43 @@ namespace HtmlGenerator.FluentAPI
 {
     public static class HTMLControls
     {
-        public static Control Elements(this Control control, params Control[] elements)
+        public static Tag Elements(this Tag tag, params Tag[] elements)
         {
-            control.Children = elements.ToList();
-            return control;
+            tag.Children = elements.ToList();
+            return tag;
         }
 
-        public static Control Element(this Control control, Control element)
+        public static Tag Element(this Tag tag, Tag element)
         {
-            control.Children = new List<Control> { element };
-            return control;
+            tag.Children = new List<Tag> { element };
+            return tag;
         }
 
-        public static Control Attribute(this Control control, string attribute, string value)
+        public static Tag Attribute(this Tag tag, string attribute, string value)
         {
             if (!string.IsNullOrEmpty(attribute))
             {
-                control.Attributes.Add(attribute, value);
+                tag.Attributes.Add(attribute, value);
             }
-            return control;
+            return tag;
         }
 
-        public static Control Class(this Control control, string value)
+        public static Tag Class(this Tag tag, string value)
         {
-            control.Attributes.Add("class", value);
-            return control;
+            tag.Attributes.Add("class", value);
+            return tag;
         }
 
-        public static Control Style(this Control control, string attr, string value)
+        public static Tag Style(this Tag tag, string attr, string value)
         {
-            control.Styles.AddStyle(attr, value);
-            return control;
+            tag.Styles.AddStyle(attr, value);
+            return tag;
         }
 
-        public static Control Data(this Control control, string dataSuffix, string value)
+        public static Tag Data(this Tag tag, string dataSuffix, string value)
         {
-            control.Attributes.Add(string.Format("data-{0}", dataSuffix), value);
-            return control;
+            tag.Attributes.Add(string.Format("data-{0}", dataSuffix), value);
+            return tag;
         }
     }
 }

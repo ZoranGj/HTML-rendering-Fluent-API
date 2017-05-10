@@ -2,15 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using API.FluentAPI;
-using API.Controls;
-using API.Infrastructure;
+using HtmlGenerator.FluentAPI;
+using HtmlGenerator.Tags;
+using static HtmlGenerator.Infrastructure.TagGenerator;
 
 namespace Domain
 {
-    public class DataEngine : Engine
+    public class DataEngine
     {
         public string GenerateForm(int entityDefinitionId)
         {
@@ -44,7 +42,7 @@ namespace Domain
                      ).Html();
         }
 
-        private Control Input(PropertyDefinition property)
+        private Tag Input(PropertyDefinition property)
         {
             var input = new Input();
             input.InputType = GetInputType(property);
@@ -69,7 +67,7 @@ namespace Domain
             }
         }
 
-        private Control DataRow(Entity entity)
+        private Tag DataRow(Entity entity)
         {
             var tableRow = new TableRow();
             tableRow.Values = entity.Properties.Select(p => p.Value).ToList();

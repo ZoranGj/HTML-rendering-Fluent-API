@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HtmlGenerator.Controls
+namespace HtmlGenerator.Tags
 {
-    public class TableRow : Control
+    public class TableRow : Tag
     {
         public List<string> Values { get; set; }
 

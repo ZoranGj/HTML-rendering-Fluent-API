@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HtmlGenerator.Controls
+namespace HtmlGenerator.Tags
 {
-    public class Label : Control
+    public class Label : Tag
     {
         public string Text { get; set; }
 

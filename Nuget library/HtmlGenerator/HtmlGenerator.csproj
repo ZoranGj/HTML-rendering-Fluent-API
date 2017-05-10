@@ -40,24 +40,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\Body.cs" />
-    <Compile Include="Controls\Container.cs" />
-    <Compile Include="Controls\Form.cs" />
-    <Compile Include="Controls\Input.cs" />
-    <Compile Include="Controls\Label.cs" />
-    <Compile Include="Controls\Table.cs" />
-    <Compile Include="Controls\TableRow.cs" />
-    <Compile Include="Controls\_Control.cs" />
+    <Compile Include="Tags\Body.cs" />
+    <Compile Include="Tags\Container.cs" />
+    <Compile Include="Tags\Form.cs" />
+    <Compile Include="Tags\Input.cs" />
+    <Compile Include="Tags\Label.cs" />
+    <Compile Include="Tags\Table.cs" />
+    <Compile Include="Tags\TableRow.cs" />
+    <Compile Include="Tags\_Tag.cs" />
     <Compile Include="FluentAPI\HTMLAttributes.cs" />
     <Compile Include="FluentAPI\HTMLControls.cs" />
     <Compile Include="FluentAPI\HTMLGeneration.cs" />
-    <Compile Include="Infrastructure\Engine.cs" />
-    <Compile Include="Infrastructure\IHTMLGenerator.cs" />
+    <Compile Include="TagGenerator.cs" />
+    <Compile Include="FluentAPI\IHTMLGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

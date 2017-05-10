@@ -5,15 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HtmlGenerator.Controls
+namespace HtmlGenerator.Tags
 {
-    public class Body : Control
+    public class Form : Tag
     {
         public override string Html()
         {
-            var stringBuilder = new StringBuilder("<body>");
+            var stringBuilder = new StringBuilder("<form>");
             stringBuilder.ChildrenHTML(this);
-            stringBuilder.Append("</body>");
+            stringBuilder.Append("</form>");
             return stringBuilder.ToString();
         }
     }

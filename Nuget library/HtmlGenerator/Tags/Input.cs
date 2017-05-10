@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace HtmlGenerator.Controls
+namespace HtmlGenerator.Tags
 {
-    public class Input : Control
+    public class Input : Tag
     {
         public string InputType { get; set; }
 
