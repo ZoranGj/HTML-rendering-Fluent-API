@@ -45,7 +45,7 @@ var html = Form().Elements(Container().Class("well").Style("padding", "20px;").B
                         Input().Class("form-control").Placeholder("Input 4..."))));
 ```
 
-Result:
+Result (as string):
 ```
 <form>
   <div class="well" style="padding: 20px;background: #f2f2f2">
@@ -73,3 +73,6 @@ Result:
   </div>
 </form>
 ```
+
+Result (as HTML rendered using HTML.Raw(html) in MVC):
+![alt text](https://i.gyazo.com/d89d2a9e14c682de716ab51bae35e595.png)
