@@ -1,12 +1,12 @@
-﻿using HtmlGenerator.FluentAPI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Text;
-using System.Threading.Tasks;
+using HtmlGenerator.FluentAPI;
 
 namespace HtmlGenerator.Tags
 {
+    /// <summary>
+    /// Tag which represents <table> HTML element.
+    /// </summary>
     public class Table : Tag
     {
         public override string Html()

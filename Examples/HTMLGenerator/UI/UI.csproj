@@ -46,7 +46,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="HtmlGenerator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\HTMLGeneratorAPI.0.0.2\lib\net452\HtmlGenerator.dll</HintPath>
+      <HintPath>..\packages\HTMLGeneratorAPI.0.1.0\lib\net452\HtmlGenerator.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">

@@ -1,12 +1,11 @@
-﻿using HtmlGenerator.FluentAPI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
+using HtmlGenerator.FluentAPI;
 
 namespace HtmlGenerator.Tags
 {
+    /// <summary>
+    /// Tag which represents <form> HTML element.
+    /// </summary>
     public class Form : Tag
     {
         public override string Html()

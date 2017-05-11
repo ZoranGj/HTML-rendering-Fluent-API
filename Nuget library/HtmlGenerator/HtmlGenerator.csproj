@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FluentAPI\HTMLAttributes.cs" />
     <Compile Include="Tags\Body.cs" />
     <Compile Include="Tags\Container.cs" />
     <Compile Include="Tags\Form.cs" />
@@ -48,11 +49,10 @@
     <Compile Include="Tags\Table.cs" />
     <Compile Include="Tags\TableRow.cs" />
     <Compile Include="Tags\_Tag.cs" />
-    <Compile Include="FluentAPI\HTMLAttributes.cs" />
-    <Compile Include="FluentAPI\HTMLControls.cs" />
+    <Compile Include="FluentAPI\HTMLElements.cs" />
     <Compile Include="FluentAPI\HTMLGeneration.cs" />
     <Compile Include="TagGenerator.cs" />
-    <Compile Include="FluentAPI\IHTMLGenerator.cs" />
+    <Compile Include="FluentAPI\IHTMLElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

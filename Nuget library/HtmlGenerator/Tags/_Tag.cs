@@ -1,18 +1,23 @@
-﻿using HtmlGenerator.Infrastructure;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using HtmlGenerator.Infrastructure;
 
 namespace HtmlGenerator.Tags
 {
+    /// <summary>
+    /// Class that represents an HTML element.
+    /// </summary>
     public abstract class Tag : IHTMLElement
     {
         public List<Tag> Children { get; set; }
         public Dictionary<string, string> Attributes { get; set; }
         public Dictionary<string, string> Styles { get; set; }
 
+        /// <summary>
+        /// Renders the Tag as a HTML string.
+        /// </summary>
+        /// <returns>HTML string.</returns>
         public abstract string Html();
 
         public Tag()
@@ -21,6 +26,10 @@ namespace HtmlGenerator.Tags
             Styles = new Dictionary<string, string>();
         }
 
+        /// <summary>
+        /// Generates the tag attributes as a string.
+        /// </summary>
+        /// <returns>String with generated attributes.</returns>
         public string GenerateAttributes()
         {
             var stringBuilder = new StringBuilder();
@@ -32,12 +41,21 @@ namespace HtmlGenerator.Tags
             return stringBuilder.ToString();
         }
 
+        /// <summary>
+        /// Generates the tag styles as a string.
+        /// </summary>
+        /// <returns>String with generated styles.</returns>
         public string GenerateStyles()
         {
-            var stringBuilder = new StringBuilder(" style='");
-            foreach (var elem in Attributes)
+            if (!Styles.Any())
             {
-                stringBuilder.Append(string.Format(" {0}='{1}'", elem.Key, elem.Value));
+                return string.Empty;
+            }
+
+            var stringBuilder = new StringBuilder(" style='");
+            foreach (var elem in Styles)
+            {
+                stringBuilder.Append(string.Format("{0}: {1}", elem.Key, elem.Value));
             }
 
             stringBuilder.Append("'");

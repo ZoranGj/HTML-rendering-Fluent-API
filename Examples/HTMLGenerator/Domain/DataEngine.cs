@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using HtmlGenerator.FluentAPI;
 using HtmlGenerator.Tags;
-using static HtmlGenerator.Infrastructure.TagGenerator;
+using static HtmlGenerator.TagGenerator;
 
 namespace Domain
 {

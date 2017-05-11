@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>HTMLGeneratorAPI</id>
-    <version>0.0.1</version>
+    <version>0.1.0</version>
     <authors>Zoran Gjuroski</authors>
     <owners>Zoran Gjuroski</owners>
     <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>

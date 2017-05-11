@@ -2,16 +2,16 @@
 <package >
   <metadata>
 	<id>HTMLGeneratorAPI</id>
-    <version>0.0.2</version>
+    <version>0.1.0</version>
     <authors>Zoran Gjuroski</authors>
     <owners>Zoran Gjuroski</owners>
     <licenseUrl>https://github.com/ZoranGj/HTML-rendering-Fluent-API</licenseUrl>
     <projectUrl>https://github.com/ZoranGj/HTML-rendering-Fluent-API</projectUrl>
     <iconUrl>https://github.com/ZoranGj/HTML-rendering-Fluent-API</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>API for generating HTML from C#</description>
+    <description>Fluent API for generating HTML from C#</description>
     <releaseNotes>Initial release.</releaseNotes>
     <copyright>Copyright 2017</copyright>
-    <tags>HTML C# HTMLGenerator HTMLRendering C#toHTML</tags>
+    <tags>HTML C# HTMLGenerator HTMLRendering HTMLRenderer C#toHTML FluentAPI API</tags>
   </metadata>
 </package>
